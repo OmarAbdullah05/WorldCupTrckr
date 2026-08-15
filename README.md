@@ -1,6 +1,7 @@
 # World Cup 2026 Infrastructure Tracker
 
 SharePoint Framework (SPFx) web part for tracking Verizon network infrastructure readiness across FIFA World Cup 2026 stadium venues.
+<img width="1346" height="985" alt="Screenshot 2026-08-15 at 12 47 01 AM" src="https://github.com/user-attachments/assets/83a1537f-3a14-4286-bfde-b6c8ace1f24b" />
 
 ## Features
 
@@ -76,7 +77,7 @@ src/webparts/stadiumTracker/
 
 ## Customizing data
 
-Edit `src/webparts/stadiumTracker/data/stadiumData.ts` to add stadiums, change milestone dates, or update statuses. In production, replace the static data with SharePoint lists or Microsoft Graph API calls.
+Edit `src/webparts/stadiumTracker/data/stadiumData.ts` to add stadiums, change milestone dates, or update statuses. This is just for sampling, in reality the static data is replaced with SharePoint lists or Microsoft Graph API calls.
 
 ## Tech stack
 
