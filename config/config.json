@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "stadium-tracker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/stadiumTracker/StadiumTrackerWebPart.js",
+          "manifest": "./src/webparts/stadiumTracker/StadiumTrackerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "StadiumTrackerWebPartStrings": "lib/webparts/stadiumTracker/loc/{locale}.js"
+  }
+}

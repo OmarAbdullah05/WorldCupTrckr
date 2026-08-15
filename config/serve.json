@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://localhost:4321/temp/preview.html",
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://localhost:4321/temp/preview.html"
+    },
+    "workbench": {
+      "pageUrl": "https://localhost:4321/temp/workbench.html"
+    },
+    "sharepoint": {
+      "pageUrl": "https://{tenantDomain}/_layouts/15/workbench.aspx"
+    }
+  }
+}

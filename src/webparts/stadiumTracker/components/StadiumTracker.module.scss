@@ -1,0 +1,454 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+// Verizon-inspired palette
+$verizon-red: #cd040b;
+$verizon-dark: #1a1a1a;
+$verizon-gray: #747676;
+$surface: #ffffff;
+$surface-alt: #f4f4f4;
+$border: #e0e0e0;
+$success: #107c10;
+$warning: #ca5010;
+$danger: #a4262c;
+$info: #0078d4;
+
+.stadiumTracker {
+  font-family: 'Segoe UI', $ms-font-family-fallbacks;
+  color: $verizon-dark;
+  background: $surface-alt;
+  min-height: 100%;
+}
+
+.header {
+  background: linear-gradient(135deg, $verizon-dark 0%, #2d2d2d 100%);
+  color: #fff;
+  padding: 24px 28px;
+  border-bottom: 4px solid $verizon-red;
+}
+
+.headerBrand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.verizonMark {
+  width: 48px;
+  height: 48px;
+  background: $verizon-red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.headerStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.statCardAlert {
+  background: rgba($verizon-red, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.statCardHighlight {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.statValue {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statValueLarge {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.statLabel {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.countdownText {
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
+  color: #ffd700;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 0;
+  min-height: 600px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  background: $surface;
+  border-right: 1px solid $border;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.sidebarTitle {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $verizon-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stadiumGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stadiumCard {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: $surface;
+  border: 2px solid $border;
+  border-radius: 10px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  position: relative;
+  font-family: inherit;
+
+  &:hover {
+    border-color: $verizon-red;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.stadiumCardSelected {
+  border-color: $verizon-red;
+  background: #fff8f8;
+  box-shadow: 0 2px 12px rgba($verizon-red, 0.15);
+}
+
+.stadiumCardAtRisk {
+  border-left: 4px solid $danger;
+}
+
+.stadiumCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.stadiumName {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.stadiumLocation {
+  font-size: 12px;
+  color: $verizon-gray;
+}
+
+.progressBadge {
+  background: $verizon-red;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.progressBarTrack {
+  height: 6px;
+  background: $surface-alt;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, $verizon-red, #e83030);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.stadiumMeta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  font-size: 11px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  color: $verizon-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.metaValue {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.nextUp {
+  margin-top: 10px;
+  font-size: 12px;
+  color: $verizon-gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nextUpLabel {
+  font-weight: 600;
+  color: $verizon-dark;
+}
+
+.riskFlag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: $danger;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.main {
+  padding: 24px 28px;
+  overflow-y: auto;
+}
+
+.milestonePanel {
+  background: $surface;
+  border-radius: 12px;
+  border: 1px solid $border;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.milestonePanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  h2 {
+    margin: 0;
+    font-size: 22px;
+  }
+}
+
+.milestoneSubtitle {
+  margin: 4px 0 0;
+  color: $verizon-gray;
+  font-size: 14px;
+}
+
+.gameDayChip {
+  background: linear-gradient(135deg, $verizon-red, #a00308);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.gameDayLabel {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.gameDayDate {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gameDayCountdown {
+  display: block;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.milestoneSection {
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $verizon-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.allComplete {
+  color: $success;
+  font-weight: 600;
+  padding: 16px;
+  background: #dff6dd;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.milestoneList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.milestoneItem {
+  padding: 14px 16px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border-left-width: 4px;
+}
+
+.status_completed {
+  border-left-color: $success;
+  opacity: 0.75;
+}
+
+.status_inprogress {
+  border-left-color: $info;
+  background: #f0f6ff;
+}
+
+.status_notstarted {
+  border-left-color: $verizon-gray;
+}
+
+.status_blocked {
+  border-left-color: $danger;
+  background: #fef0f0;
+}
+
+.completedList .milestoneItem {
+  padding: 10px 16px;
+}
+
+.milestoneMain {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.milestoneStatus {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: $surface-alt;
+}
+
+.milestoneName {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.milestoneDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: $verizon-gray;
+}
+
+.milestoneCategory {
+  background: $surface-alt;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.milestoneDue {
+  font-weight: 500;
+}
+
+.overdue {
+  color: $danger;
+  font-weight: 600;
+}
+
+.daysLeft {
+  color: $info;
+}
+
+.milestoneOwner {
+  &::before {
+    content: '·';
+    margin-right: 12px;
+  }
+}
+
+.milestoneNotes {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: $warning;
+  font-style: italic;
+}

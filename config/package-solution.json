@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "world-cup-infra-client-side-solution",
+    "id": "fc382c0b-b977-4eff-ba59-0bb54011b5ca",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "world-cup-infra description"
+      },
+      "longDescription": {
+        "default": "world-cup-infra description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "world-cup-infra Feature",
+        "description": "The feature that activates elements of the world-cup-infra solution.",
+        "id": "26d6bf57-125b-4cca-9d11-84957d67d6c0",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/world-cup-infra.sppkg"
+  }
+}

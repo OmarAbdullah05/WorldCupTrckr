@@ -1,0 +1,25 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "world-cup-infra",
+    "environment": "spo",
+    "packageManager": "npm",
+    "skipFeatureDeployment": true,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "StadiumTracker",
+    "componentDescription": "Track Verizon infrastructure milestones for World Cup stadiums",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "20.20.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "world-cup-infra",
+    "libraryId": "fc382c0b-b977-4eff-ba59-0bb54011b5ca",
+    "solutionShortDescription": "world-cup-infra description",
+    "isDomainIsolated": false
+  }
+}
